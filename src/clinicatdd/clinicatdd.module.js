@@ -18,6 +18,7 @@
   angular.module('clinicatdd',
       [
           'clinicatdd.config',
+          'clinicatdd.controllers',
           'clinicatdd.directives',
           'clinicatdd.filters',
           'clinicatdd.services'

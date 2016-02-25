@@ -11,12 +11,14 @@
       });
 
   // Modules
+  angular.module('clinicatdd.controllers', []);
   angular.module('clinicatdd.directives', []);
   angular.module('clinicatdd.filters', []);
   angular.module('clinicatdd.services', []);
   angular.module('clinicatdd',
       [
           'clinicatdd.config',
+          'clinicatdd.controllers',
           'clinicatdd.directives',
           'clinicatdd.filters',
           'clinicatdd.services'
@@ -24,7 +26,7 @@
 
 })(angular);
 
-angular.module('clinicatdd.filters')
-  .controller('MyTestCtrl', ['$scope', function ($scope, myinfo) {
-    $scope.something = [];
+angular.module('clinicatdd.controllers')
+  .controller('MyTestCtrl', ['$scope', function ($scope) {
+    $scope.test = 'hello human';
   }]);
