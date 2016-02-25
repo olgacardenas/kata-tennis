@@ -25,7 +25,12 @@ describe('MyTestCtrl', function () {
     });
 
     it('init point per player', function () {
-        expect($scope.scoreinit).toBe(0);
+      expect($scope.initScores).toBeDefined();
+
+      $scope.initScores();
+
+      expect($scope.players[0].score).toBe(0);
+      expect($scope.players[1].score).toBe(0);
     });
 
   });
