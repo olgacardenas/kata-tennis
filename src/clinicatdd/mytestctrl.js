@@ -5,4 +5,8 @@ angular.module('clinicatdd.controllers')
     $scope.winner = function(){
       return -1;
     };
+
+    $scope.assignScore = function(score){
+      $scope.score = score;
+    };
   }]);

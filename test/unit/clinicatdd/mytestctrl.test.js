@@ -24,5 +24,9 @@ describe('MyTestCtrl', function () {
       expect($scope.winner()).toBe(-1);
     });
 
+    it('assign score to a specific player', function () {
+      expect($scope.assignScore(3)).toBe();
+    });
+
   });
 });
