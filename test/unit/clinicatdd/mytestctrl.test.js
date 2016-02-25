@@ -3,7 +3,7 @@ describe('MyTestCtrl', function () {
   var $scope, controller;
   var $controller;
 
-  beforeEach(module('clinicatdd.filters'));
+  beforeEach(module('clinicatdd.controllers'));
 
   describe("when there is no info", function () {
 

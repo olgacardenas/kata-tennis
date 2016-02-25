@@ -11,6 +11,7 @@
       });
 
   // Modules
+  angular.module('clinicatdd.controllers', []);
   angular.module('clinicatdd.directives', []);
   angular.module('clinicatdd.filters', []);
   angular.module('clinicatdd.services', []);
