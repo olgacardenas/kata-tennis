@@ -23,10 +23,6 @@ describe('MyTestCtrl', function () {
     it('when game start winner is -1', function () {
       expect($scope.winner()).toBe(-1);
     });
-    it('when game start winner is -1', function () {
-      expect($scope.winner).toBeDefined();
-      expect($scope.winner()).toBe(-1);
-    });
 
   });
 });
