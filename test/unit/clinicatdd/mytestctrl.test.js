@@ -51,5 +51,12 @@ describe('MyTestCtrl', function () {
       expect($scope.winner()).toBe($scope.players[1]);
     });
 
+    it('if player has 4 points, he is the winner', function () {
+      $scope.addPointToPlayer($scope.players[1]);
+      $scope.addPointToPlayer($scope.players[1]);
+      $scope.addPointToPlayer($scope.players[1]);
+      $scope.addPointToPlayer($scope.players[1]);
+    });
+
   });
 });

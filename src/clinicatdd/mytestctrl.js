@@ -10,20 +10,15 @@ angular.module('clinicatdd.controllers')
     };
 
     $scope.winner = function(){
-
-
-
       if($scope.players[0].score == 4 ){
+      	return $scope.players[0];
+      }
 
-
-
-       }
-
+      if($scope.players[1].score == 4 ){
+      	return $scope.players[1];
+      }
 
       return -1;
-
-
-
     };
 
     $scope.assignScore = function(score){
