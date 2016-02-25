@@ -10,14 +10,17 @@ angular.module('clinicatdd.controllers')
     };
 
     $scope.winner = function(){
-      if($scope.players[0].score == 4 ){
-      	return $scope.players[0];
-      }
+      var diff = Math.abs($scope.players[1].score - $scope.players[0].score);
 
-      if($scope.players[1].score == 4 ){
-      	return $scope.players[1];
-      }
+      if(diff >= 2){
+        if($scope.players[0].score == 4 ){
+          return $scope.players[0];
+        }
 
+        if($scope.players[1].score == 4 ){
+          return $scope.players[1];
+        }
+      }
       return -1;
     };
 

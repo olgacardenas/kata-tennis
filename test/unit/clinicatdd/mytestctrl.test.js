@@ -51,11 +51,42 @@ describe('MyTestCtrl', function () {
       expect($scope.winner()).toBe($scope.players[1]);
     });
 
-    it('if player has 4 points, he is the winner', function () {
+    it('if player 1 has 4 points and player 2 has 2 points, player 1 is the winner', function () {
+      $scope.addPointToPlayer($scope.players[0]);
+      $scope.addPointToPlayer($scope.players[0]);
+      $scope.addPointToPlayer($scope.players[0]);
+      $scope.addPointToPlayer($scope.players[0]);
+      $scope.addPointToPlayer($scope.players[1]);
+      $scope.addPointToPlayer($scope.players[1]);
+      expect($scope.winner()).toBe($scope.players[0]);
+    });
+
+    it('if player 1 has 4 points but player 3 has 3, there is no winner', function () {
+      $scope.addPointToPlayer($scope.players[0]);
+      $scope.addPointToPlayer($scope.players[0]);
+      $scope.addPointToPlayer($scope.players[0]);
+      $scope.addPointToPlayer($scope.players[0]);
+      $scope.addPointToPlayer($scope.players[1]);
+      $scope.addPointToPlayer($scope.players[1]);
+      $scope.addPointToPlayer($scope.players[1]);
+      expect($scope.winner()).toBe(-1);
+    });
+
+
+    it('if player 2 has 4 points but player 1 has 2, winner 2 ', function () {
+
+      $scope.addPointToPlayer($scope.players[0]);
+      $scope.addPointToPlayer($scope.players[0]);
+
+
       $scope.addPointToPlayer($scope.players[1]);
       $scope.addPointToPlayer($scope.players[1]);
       $scope.addPointToPlayer($scope.players[1]);
       $scope.addPointToPlayer($scope.players[1]);
+
+      expect($scope.winner()).toBe($scope.players[1]);
+
+
     });
 
   });
