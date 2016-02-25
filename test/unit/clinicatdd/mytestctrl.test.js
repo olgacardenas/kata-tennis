@@ -25,13 +25,24 @@ describe('MyTestCtrl', function () {
     });
 
     it('init point per player', function () {
-      expect($scope.initScores).toBeDefined();
-
-      $scope.initScores();
-
       expect($scope.players[0].score).toBe(0);
       expect($scope.players[1].score).toBe(0);
     });
+
+    it('can add points to player 1', function () {
+      expect($scope.addPointToPlayer).toBeDefined();
+      $scope.addPointToPlayer($scope.players[0]);
+      expect($scope.players[0].score).toBe(1);
+    });
+
+    it('can add 3 points to player 2', function () {
+      $scope.addPointToPlayer($scope.players[1]);
+      $scope.addPointToPlayer($scope.players[1]);
+      $scope.addPointToPlayer($scope.players[1]);
+      expect($scope.players[1].score).toBe(3);
+    });
+
+
 
   });
 });

@@ -3,7 +3,8 @@ angular.module('clinicatdd.controllers')
     $scope.test = 'hello human';
     $scope.players = [{score: null},{score: null}];
 
-    $scope.initScores = function() {
+
+    var initScores = function() {
     	$scope.players[0].score = 0;
     	$scope.players[1].score = 0;
     };
@@ -15,4 +16,10 @@ angular.module('clinicatdd.controllers')
     $scope.assignScore = function(score){
       $scope.score = score;
     };
+
+    $scope.addPointToPlayer = function(player){
+      player.score++;
+    };
+
+    initScores();
   }]);
